@@ -1,0 +1,37 @@
+pl:
+  parkings: Parkingi
+  private: Prywatne
+  public: Publiczne
+  day_price_from: Cena/dzień od
+  day_price_to: Cena/dzień do
+  hour_price_from: Cena/godzinę od
+  hour_price_to: Cena/godzinę do
+  search: Szukaj
+  number_of_places: Ilość miejsc
+  create_parking: Utwórz parking
+  new: Nowy
+  parking_details: Szczegóły parkingu
+  back: Wróć
+  new_parking: Nowy parking
+  save: Zapisz
+  show: Szczegóły
+  edit: Edytuj
+  rent_a_place: Wynajmij miejsce
+  delete: Usuń
+  user: Użytkownik
+  log_out: Wyloguj się
+  log_in: Zaloguj się
+  register: Zarejestruj się
+  cars: Samochody
+  rents: Najmy
+  create_success: Parking utworzony!
+  update_success: Parking zaktualizowany!
+  delete_success: Parking usunięty!
+  parking_not_found: Nie znaleziono parkingu!
+  language: Język
+  header: Book Park
+  login_fb: Zaloguj się z Facebookiem
+  indoor: Zadaszony
+  outdoor: Niezadaszony
+  private: Prywatny
+  street: Ulica

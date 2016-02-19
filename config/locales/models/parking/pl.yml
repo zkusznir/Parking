@@ -1,0 +1,11 @@
+pl:
+  activerecord:
+    models:
+      parking: Parking
+    attributes:
+      parking:
+        places: Miejsca
+        kind: Typ
+        hour_price: Cena/godzinę
+        day_price: Cena/dzień
+        owner: Właściciel

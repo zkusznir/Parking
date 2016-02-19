@@ -1,0 +1,1 @@
+Person.create(first_name: 'Zuzanna', last_name: 'Kusznir')

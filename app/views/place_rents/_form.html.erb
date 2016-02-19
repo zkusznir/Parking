@@ -1,0 +1,22 @@
+<%= form_for([@parking, @place_rent]) do |f| %>
+  <%= render 'application/errors', object: @place_rent %>
+
+  <table>
+    <tr>
+      <td><%= f.label :start_date %></td>
+      <td><%= f.text_field :start_date %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :end_date %></td>
+      <td><%= f.text_field :end_date %></td>
+    </tr>
+      <td><%= f.label :car %></td>
+      <td><%= collection_select(:place_rent, :car_id, current_person.cars, :id, :model) %></td>
+    <tr>
+    </tr>
+  </table>
+  </br>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>

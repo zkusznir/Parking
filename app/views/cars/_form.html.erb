@@ -1,0 +1,32 @@
+<%= form_for(@car) do |f| %>
+  <%= render 'application/errors', object: @car %>
+
+  <table>
+    <tr>
+      <td><%= f.label :registration_number %></td>
+      <td><%= f.text_field :registration_number %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :model %></td>
+      <td><%= f.text_field :model %></td>
+    </tr>
+    <% if @car.image %>
+      <tr>
+        <td><b>Image:</b></td>
+        <td><%= image_tag @car.image.thumb('400x200#').url if @car.image_stored? %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :remove_image %></td>
+        <td><%= f.check_box :remove_image %></td>
+      </tr>
+    <% end %>
+    <tr>
+      <td><%= f.label :image %></td>
+      <td><%= f.file_field :image %></td>
+    </tr>
+  </table>
+  </br>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>

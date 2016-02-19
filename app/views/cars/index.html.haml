@@ -1,0 +1,9 @@
+%h2 Cars
+%table
+  %tr
+    %td
+      %b Registration number
+    %td
+      %b Model
+  = render @cars
+= link_to 'New', new_car_path

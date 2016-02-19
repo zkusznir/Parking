@@ -1,0 +1,19 @@
+<h2>Place rent details</h2>
+
+<table>
+  <tr>
+    <td><b>Start date:</b></td>
+    <td><%= @place_rent.start_date %></td>
+  </tr>
+  <tr>
+    <td><b>End date:</b></td>
+    <td><%= @place_rent.end_date %></td>
+  </tr>
+  <tr>
+    <td><b>Car:</b></td>
+    <td><%= @place_rent.car.registration_number %></td>
+  </tr>
+</table>
+<br/>
+
+<%= link_to 'Back', place_rents_path %>

@@ -1,0 +1,9 @@
+pl:
+  activerecord:
+    models:
+      address: Adres
+    attributes:
+      address:
+        city: Miasto
+        street: Ulica
+        zip_code: Kod pocztowy

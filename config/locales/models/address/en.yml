@@ -1,0 +1,9 @@
+en:
+  activerecord:
+    models:
+      address: Address
+    attributes:
+      address:
+        city: City
+        street: Street
+        zip_code: Zip code

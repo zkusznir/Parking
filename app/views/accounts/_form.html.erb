@@ -1,0 +1,32 @@
+<%= form_for(@account) do |f| %>
+  <%= render 'application/errors', object: @account %>
+
+  <table>
+    <tr>
+      <td><%= f.label :email %></td>
+      <td><%= f.text_field :email %></td>
+    </tr>
+    <%= f.fields_for :person do |ff| %>
+      <tr>
+        <td><%= ff.label :first_name %></td>
+        <td><%= ff.text_field :first_name %></td>
+      </tr>
+      <tr>
+        <td><%= ff.label :last_name %></td>
+        <td><%= ff.text_field :last_name %></td>
+      </tr>
+    <% end %>
+    <tr>
+      <td><%= f.label :password %></td>
+      <td><%= password_field(:account, :password) %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :password_confirmation %></td>
+      <td><%= password_field(:account, :password_confirmation) %></td>
+    </tr>
+  </table>
+  </br>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>

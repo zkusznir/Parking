@@ -1,0 +1,6 @@
+%tr
+  %td= car.registration_number
+  %td= car.model
+  %td= link_to 'Show', car
+  %td= link_to 'Edit', edit_car_path(car)
+  %td= link_to 'Delete', car, method: :delete, data: { confirm: 'Are you sure?' }

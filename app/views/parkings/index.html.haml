@@ -1,0 +1,41 @@
+%h2= t :parkings
+
+= form_tag parkings_path, :method => 'get' do
+  %table
+    %tr
+      %td= Parking.human_attribute_name(:kind)
+      %td= t :private
+      %td= check_box_tag :private_kind, '1', params[:private_kind]
+      %td= t :public
+      %td= check_box_tag :public_kind, '1', params[:public_kind]
+  %table
+    %tr
+      %td= t :day_price_from
+      %td= text_field_tag :day_price_from, params[:day_price_from]
+      %td= t :day_price_to
+      %td= text_field_tag :day_price_to, params[:day_price_to]
+    %tr
+      %td= t :hour_price_from
+      %td= text_field_tag :hour_price_from, params[:hour_price_from]
+      %td= t :hour_price_to
+      %td>= text_field_tag :hour_price_to, params[:hour_price_to]
+    %tr
+      %td= Address.human_attribute_name(:city)
+      %td= text_field_tag :city, params[:city]
+  = submit_tag t(:search)
+
+%table
+  %tr
+    %td
+      %b= Address.human_attribute_name(:city)
+    %td
+      %b= Parking.human_attribute_name(:places)
+    %td
+      %b= Parking.human_attribute_name(:hour_price)
+    %td
+      %b= Parking.human_attribute_name(:day_price)
+  = render @parkings
+
+= will_paginate @parkings
+
+= link_to t(:new), new_parking_path

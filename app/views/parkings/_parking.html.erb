@@ -1,0 +1,13 @@
+<tr>
+  <td>
+    <% if parking.address %>
+      <%= parking.address.city %>
+    <% end %>
+  </td>
+  <td><%= parking.places %></td>
+  <td><%= parking.hour_price %></td>
+  <td><%= parking.day_price %></td>
+  <td><%= link_to t(:show), parking %></td>
+  <td><%= link_to t(:edit), edit_parking_path(parking) %></td>
+  <td><%= link_to t(:rent_a_place), new_parking_place_rent_path(parking) %></td>
+  <td><%= link_to t(:delete), parking, method: :delete, data: { confirm: "Are you sure?" } %></td></tr>

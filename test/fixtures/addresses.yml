@@ -1,0 +1,9 @@
+wroclaw:
+  city: Wroclaw
+  street: Swidnicka
+  zip_code: 50-950
+
+warszawa:
+  city: Warszawa
+  street: Grodzka
+  zip_code: 22-222

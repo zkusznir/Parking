@@ -1,0 +1,45 @@
+<div class="page-header">
+  <div class="container">
+    <% flash.each do |key, value| %>
+      <div class="<%= flash_class(key) %>">
+        <%= value %>
+      </div>
+  <% end %>
+  </div>
+
+  <div class="container">
+    <div class="lang">
+      <%= t :language, class: 'control-label' %>
+      <% if I18n.locale == I18n.default_locale %>
+        <%= link_to 'Polski', :locale=>'pl'%>
+      <% else %>
+        <%= link_to 'English', :locale=>'en'%>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="lang">
+      <% if current_person %>
+        <%= t :user%>: <b><%= current_person.full_name %></b>
+        <%= link_to t(:log_out), logout_path, method: :delete %>
+      <% else %>
+        <%= link_to t(:log_in), login_path %>
+        <%= link_to t(:login_fb), login_fb_path %>
+        <%= link_to t(:register), register_path %>
+      <% end %>
+    </div>
+  </div>
+  <div class="container">
+    <div class="span4">
+      <h1><%= t :header %></h1>
+    </div>
+  </div>
+  <div>
+    <%= link_to t(:parkings), parkings_path, class: "btn btn-info" %>
+    <% if current_person %>
+      <%= link_to t(:cars), cars_path, class: "btn btn-info" %>
+      <%= link_to t(:rents), place_rents_path, class: "btn btn-info" %>
+    <% end %>
+  </div>
+</div>

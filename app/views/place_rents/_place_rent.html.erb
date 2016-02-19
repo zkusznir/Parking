@@ -1,0 +1,11 @@
+<tr>
+  <td><%= place_rent.start_date %></td>
+  <td><%= place_rent.end_date %></td>
+  <td><%= link_to 'Car', place_rent.car %></td>
+  <td>
+    <% if place_rent.parking %>
+      <%= link_to 'Parking', place_rent.parking %>
+    <% end %>
+  </td>
+  <td><%= link_to 'Show', place_rent %></td>
+</tr>

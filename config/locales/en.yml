@@ -1,0 +1,37 @@
+en:
+  parkings: Parkings
+  private: Private
+  public: Public
+  day_price_from: Day price from
+  day_price_to: Day price to
+  hour_price_from: Hour price from
+  hour_price_to: Hour price to
+  search: Search
+  number_of_places: Number of places
+  create_parking: Create parking
+  new: New
+  parking_details: Parking details
+  back: Back
+  new_parking: New parking
+  save: Save
+  show: Show
+  edit: Edit
+  rent_a_place: Rent a place
+  delete: Delete
+  user: User
+  log_out: Log out
+  log_in: Log in
+  register: Register
+  cars: Cars
+  rents: Rents
+  create_success: Parking successfully created!
+  update_success: Parking successfully updated!
+  delete_success: Parking successfully deleted!
+  parking_not_found: No such parking was found!
+  language: Language
+  header: Book Park
+  login_fb: Login with Facebook
+  indoor: Indoor
+  outdoor: Outdoor
+  private: Private
+  street: Street

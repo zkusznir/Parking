@@ -1,0 +1,21 @@
+<h2>Car details</h2>
+
+<table>
+  <tr>
+    <td><b>Registration number:</b></td>
+    <td><%= @car.registration_number %></td>
+  </tr>
+  <tr>
+    <td><b>Model:</b></td>
+    <td><%= @car.model %></td>
+  </tr>
+  <% if @car.image %>
+    <tr>
+      <td><b>Image:</b></td>
+      <td><%= image_tag @car.image.thumb('400x200#').url if @car.image_stored? %></td>
+    </tr>
+  <% end %>
+</table>
+<br/>
+
+<%= link_to 'Back', cars_path %>

@@ -1,0 +1,40 @@
+<%= form_for(@parking) do |f| %>
+  <%= render 'application/errors', object: @parking %>
+
+  <table>
+    <tr>
+      <td><%= Parking.human_attribute_name(:places) %></td>
+      <td><%= f.number_field :places, :step => 1 %></td>
+    </tr>
+    <tr>
+      <td><%= Parking.human_attribute_name(:kind) %></td>
+      <td><%= f.select :kind, kinds %></td>
+    </tr>
+    <tr>
+      <td><%= Parking.human_attribute_name(:hour_price) %></td>
+      <td><%= f.number_field :hour_price, :step => 0.01 %></td>
+    </tr>
+    <tr>
+      <td><%= Parking.human_attribute_name(:day_price) %></td>
+      <td><%= f.number_field :day_price, :step => 0.01 %></td>
+    </tr>
+    <%= f.fields_for :address do |ff| %>
+      <tr>
+        <td><%= Address.human_attribute_name(:city) %></td>
+        <td><%= ff.text_field :city %></td>
+      </tr>
+      <tr>
+        <td><%= Address.human_attribute_name(:street) %></td>
+        <td><%= ff.text_field :street %></td>
+      </tr>
+      <tr>
+        <td><%= Address.human_attribute_name(:zip_code) %></td>
+        <td><%= ff.text_field :zip_code %></td>
+      </tr>
+    <% end %>
+  </table>
+  </br>
+  <div>
+    <%= f.submit t(:save) %>
+  </div>
+<% end %>

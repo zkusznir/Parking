@@ -1,0 +1,39 @@
+<h2><%= t :parking_details %></h2>
+
+<table>
+  <tr>
+    <td><b><%= Parking.human_attribute_name(:kind) %></b></td>
+    <td><%= t(@parking.kind) %></td>
+  </tr>
+  <tr>
+    <td><b><%= Parking.human_attribute_name(:places) %></b></td>
+    <td><%= @parking.places %></td>
+  </tr>
+  <tr>
+    <td><b><%= Parking.human_attribute_name(:hour_price) %></b></td>
+    <td><%= @parking.hour_price %></td>
+  </tr>
+  <tr>
+    <td><b><%= Parking.human_attribute_name(:day_price) %></b></td>
+    <td><%= @parking.day_price %></td>
+  </tr>
+  <% if @parking.address %>
+    <tr>
+      <td><b><%= Address.human_attribute_name(:city) %></b></td>
+      <td><%= @parking.address.city %></td>
+    </tr>
+    <tr>
+      <td><b><%= Address.human_attribute_name(:street) %></b></td>
+      <td><%= @parking.address.street %></td>
+    </tr>
+  <% end %>
+  <% if @parking.owner %>
+    <tr>
+      <td><b><%= Parking.human_attribute_name(:owner) %></b></td>
+      <td><%= @parking.owner.full_name %></td>
+    </tr>
+  <% end %>
+</table>
+<br/>
+
+<%= link_to t(:back), parkings_path %>
